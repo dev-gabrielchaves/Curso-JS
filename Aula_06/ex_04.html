@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: rgb(76, 157, 157);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <p>Writing my first program using JS.</p>
+    <script>
+        var n1 = Number(window.prompt('Type a number:')) // Converts the String into a number
+        var n2 = Number(window.prompt('Type another number:'))
+        var s = n1 + n2 // Concatenates two numbers now, because I've changed their type
+        window.alert('The sum is: ' + s) // If n1 = 2 and n2 = 4, s = 6
+        // You can also use 'Number.parseInt' and 'Number.parseFloat' to force their type
+        
+        n1 = n1.toString() // Converts the number into a String
+        n2 = n2.toString()
+        s = n1 + n2
+        window.alert('The two numbers put together is: ' + s)
+    </script>
+</body>
+</html>
