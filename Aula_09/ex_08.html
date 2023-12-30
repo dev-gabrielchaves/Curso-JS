@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Steps with DOM</title>
+    <style>
+        body {
+            background-color: rgb(87, 168, 176);
+            color: white;
+            font: normal 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Getting started with DOM!</h1>
+    <p>Here comes the results...</p>
+    <p>Learning how to use <strong>DOM</strong> in JavaScript!</p>
+    <div class="msg">Click here</div>
+    <script>
+        window.document.write('<p>This was written inside the JS code!</p>') // Whatever you write inside here, it will show in the HTML document
+        var firstp = window.document.getElementsByTagName('p')[1] // Here is a way that you can call elements from the HTML
+        window.document.write('This was also created inside the JS... ' + firstp.innerText)
+        window.document.write('<br>Using innerHTML... ' + firstp.innerHTML)
+        var mymsg = window.document.getElementsByClassName('msg')[0] // Here is another way, I need to put the 0 to select which element is gonna be choosen, because as you can see it calls 'getElements'
+        mymsg.style.background = 'green'
+        var mytitle = window.document.querySelector('h1#title') // Another way, using querySelector
+        mytitle.innerText = "I've changed the title!!!"
+    </script>
+</body>
+</html>
