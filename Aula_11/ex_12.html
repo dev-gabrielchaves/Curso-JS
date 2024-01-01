@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Speed checker</h1>
+    <p>Type the speed you are riding:</p>
+    <input type="number" id="speed">
+    <input type="button" value="Check" onclick="speedchecker()">
+    <div id="res"></div>
+    <script>
+        function speedchecker() {
+            var iptspeed = document.getElementById('speed')
+            var speedvalue = Number(iptspeed.value)
+            var result = document.getElementById('res')
+            if (speedvalue > 60) {
+                result.innerHTML = '<p>You are riding to fast, slow down!</p>'
+            } else {
+                result.innerHTML = '<p>You are riding under the speed limit, enjoy the trip!</p>'
+            }
+        }
+    </script>
+</body>
+</html>
