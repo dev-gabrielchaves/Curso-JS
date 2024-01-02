@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Now</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+        .container {
+            background-color: white;
+            width: 500px;
+            height: 300px;
+            margin: 15px auto;
+            border-radius: 15px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+        #showtimer {
+            padding-top: 15px;
+            text-align: center;
+        }
+        #info {
+            text-align: center;
+            color: white;
+        }
+        #timeimg {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            margin: 25px 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Time Now</h1>
+    <div class="container">
+        <p id="showtimer"></p>
+        <img id="timeimg" src="imgs/evening.jpg" alt="">
+    </div>
+    <p id="info">@dev-gabrielchaves</p>
+
+    <script>
+        // Getting the current time
+        var timenow = new Date()
+        var hournow = timenow.getHours()
+
+        // Making it possible to the user to see the current time, changing p#showtimer
+        var tagshowtimer = document.querySelector('p#showtimer')
+        tagshowtimer.innerHTML = `The current time is <strong>${hournow}</strong>.`
+        
+        // Getting img element
+        var timeimg = document.getElementById('timeimg')
+
+        // Styling the website depending on the hour of the day
+        if (hournow < 12) {
+            document.body.style.background = '#C89D32'
+            timeimg.src = 'imgs/morning.jpg'
+        } else if (hournow < 18) {
+            document.body.style.background = '#FF8000'
+            timeimg.src = 'imgs/afternoon.jpg'
+        } else {
+            document.body.style.background = '#6666FF'
+            timeimg.src = 'imgs/evening.jpg'
+        }
+    </script>
+</body>
+</html>
