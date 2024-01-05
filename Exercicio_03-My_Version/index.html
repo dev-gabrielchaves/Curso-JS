@@ -22,7 +22,7 @@
         </div>
         <input type="button" class="button" value="Verify" onclick=verify()>
         <p id="person_info">Fill the fields above to see the results!</p>
-        <img src="" alt="" id="person_img">
+        <img src="imgs/interrogation.jpg" alt="" id="person_img">
     </div>
     <p class="github_info">@dev-gabrielchaves</p>
     <script>
@@ -37,6 +37,21 @@
             if (age < 18 && sex == 'male') {
                 person_info.innerHTML = `You are a boy with <strong>${age}</strong> year(s) old!`
                 img.src = 'imgs/boy_child.jpeg'
+            } else if (age < 50 && sex == 'male') {
+                person_info.innerHTML = `You are a man with <strong>${age}</strong> year(s) old!`
+                img.src = 'imgs/man.jpg'
+            } else if (age > 50 && sex == 'male') {
+                person_info.innerHTML = `You are a man with <strong>${age}</strong> year(s) old!`
+                img.src = 'imgs/old_man.jpg'
+            } else if (age < 18 && sex == 'female') {
+                person_info.innerHTML = `You are a girl with <strong>${age}</strong> year(s) old!`
+                img.src = 'imgs/girl_child.jpg'
+            } else if (age < 50 && sex == 'female') {
+                person_info.innerHTML = `You are a woman with <strong>${age}</strong> year(s) old!`
+                img.src = 'imgs/woman.jpg'
+            } else if (age > 70 && sex == 'female') {
+                person_info.innerHTML = `You are a woman with <strong>${age}</strong> year(s) old!`
+                img.src = 'imgs/old_woman.jpg'
             }
         }
     </script>

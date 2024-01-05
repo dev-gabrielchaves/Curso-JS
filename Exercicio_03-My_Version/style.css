@@ -58,6 +58,7 @@ input[name="sex"]{
 #person_img{
     width: 200px;
     height: 200px;
+    object-fit:fill;
     margin: 10px auto;
     border-radius: 100px;
 }
