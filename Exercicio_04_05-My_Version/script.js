@@ -3,7 +3,9 @@ function count() {
     var end = Number(document.getElementById('end').value)
     var increment = Number(document.getElementById('increment').value)
     var counter = document.getElementById('counter')
-    if (start >= end && increment > 0) {
+    if (increment == 0) {
+        window.alert('Increment can not be 0!')
+    } else if (start >= end && increment > 0) {
         window.alert('The start value must be less than the end value!')
     } else if (start <= end && increment < 0) {
         window.alert('The start value must be greater than the end value!')
